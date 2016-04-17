@@ -4,3 +4,4 @@
 4- A on diu 10 comments, que a la seva dreta surti la icona images/comments.png
 5- Posar marc a la imatge frontal
 6- Afegir un contorn interliniat al widget lateral que comença per Text
+7- Posar en cursives la data sota el títol de cada post
