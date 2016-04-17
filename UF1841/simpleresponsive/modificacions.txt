@@ -3,3 +3,4 @@
 3- Canviar h1 amb un tipus de lletra de Google Fonts (el que vulgueu). Per cert... corregiu la resta de h1 que surten i canvieu-los per h2
 4- A on diu 10 comments, que a la seva dreta surti la icona images/comments.png
 5- Posar marc a la imatge frontal
+6- Afegir un contorn interliniat al widget lateral que comença per Text
