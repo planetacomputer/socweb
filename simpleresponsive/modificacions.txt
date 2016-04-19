@@ -1,0 +1,10 @@
+1- Corregir els colors en punts de ruptura responsive
+2- Fer més gran la mida del menú aside, i un xic més petits els apartats dels subnivells
+3- Canviar h1 amb un tipus de lletra de Google Fonts (el que vulgueu). Per cert... corregiu la resta de h1 que surten i canvieu-los per h2 (compte, canviar també els estils corresponent a aquestes etiquetes que ara desapareixen)
+4- A on diu "10 comments", canviar el color a blau. Asignar un enllaç a la pagina 'comments.html'(no s'ha de fer) i s'ha d'obrir en una pestanya nova. A més a la dreta de '10 comments' ha de sortir la icona '../images/comments.png' de la carpeta /images, amb background-image.
+5- Posar marc a la imatge frontal
+6- Afegir un contorn puntejat al widget lateral que comença per Text, i afegir un padding perquè el text no quedi tan enganxat al contorn.
+7- Posar en cursives la data sota el títol de cada post
+8- Afegir al menú principal l'opció 'Qui Som', entre Parent Page i Contact
+9- Afegir sota l'opció del menú principal dues opcions: Productes i Serveis.
+10. A l'opció Productes asignar un submenú amb les opcions: Casa, Feina, Temps Lliure
