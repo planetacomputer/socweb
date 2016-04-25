@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Page</h1>
+
+<p class="miclase" id="demo" onclick="alert('hola')">mi primer p</p>
+<p class="miclase" onclick="alert('hola')">mi segundo p</p>
+
+<script>
+  document.getElementById("demo").innerHTML = "Hello World!";
+  var arrElements = document.getElementsByClassName("miclase");
+  var text = "";
+  for (var i = 0; i < arrElements.length; i++) {
+  	text += arrElements[i].innerHTML + "\n";
+  }
+  alert(text);
+  console.log("hola");
+</script>
+
+</body>
+</html>
