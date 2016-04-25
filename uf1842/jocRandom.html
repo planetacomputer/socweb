@@ -10,10 +10,12 @@
     var num = Math.round(Math.random()*limit + 1);
     console.log(num); //mostrem per consola el num escollit, per debug
     var intents = 0;
+    var text = "";
 	//alert(num);
 	var aux;
 	do{
-		aux = prompt("Quin número creus que és entre l'1 i el " + limit + " ? Portes " + intents + " intents");
+		var aux = prompt("Quin número creus que és entre l'1 i el " + limit + " ? Portes " + intents + " intents. " + text);
+		text += aux + ", ";
 
 		//el numero de l'intent es mes gran
 		if(aux > num){
