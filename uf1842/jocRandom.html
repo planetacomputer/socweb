@@ -1,0 +1,35 @@
+<!DOCTYPE html5>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Joc del Número</title>
+</head>
+<body>
+<script type="text/javascript">
+    var limit = 5;
+    var num = Math.round(Math.random()*limit + 1);
+    console.log(num); //mostrem per consola el num escollit, per debug
+    var intents = 0;
+	//alert(num);
+	do{
+		var aux = prompt("Quin número creus que és entre l'1 i el " + limit + " ? Portes " + intents + " intents");
+
+		//el numero de l'intent es mes gran
+		if(aux > num){
+			alert("El teu numero es mes gran que l'escollit");
+		}
+		//el numero de l'intent es mes petit
+		else if(aux < num){
+			alert("El teu numero es mes petit que l'escollit");
+		}
+		//L'has encertada!
+		else{
+			alert("Has encertat! Es el " + num);
+		}
+		//Pugem el comptador d'intents
+		intents++;
+	}
+	while(aux != num);
+</script>
+</body>
+</html>
