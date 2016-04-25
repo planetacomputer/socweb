@@ -12,6 +12,10 @@
   var arrElements = document.getElementsByClassName("miclase");
   var text = "";
   for (var i = 0; i < arrElements.length; i++) {
+  	if(i == 1){
+  		arrElements[i].innerHTML = "mi segundo p modificado";
+  		arrElements[i].style.backgroundColor = "red";
+  	}
   	text += arrElements[i].innerHTML + "\n";
   }
   alert(text);
