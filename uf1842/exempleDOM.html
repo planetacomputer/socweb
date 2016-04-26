@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<title>Hola Exemple DOM</title>
 <body>
 
 <h1>My First Page</h1>
@@ -7,7 +8,10 @@
 <p class="miclase" id="demo" onclick="alert('hola')">mi primer p</p>
 <p class="miclase" onclick="alert('hola')">mi segundo p</p>
 
+<a target="_blank" href="anchors.html#pepe">Enllaç a Pepe</a>
+
 <script>
+  alert(document.lastModified);
   document.getElementById("demo").innerHTML = "Hello World!";
   var arrElements = document.getElementsByClassName("miclase");
   var text = "";

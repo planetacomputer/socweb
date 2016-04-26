@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="p1" onclick = "mostrar()">Hello World!</p>
+
+<script>
+var flag = 0;
+function mostrar(){
+  if(flag == 0){
+    document.getElementById("p1").innerHTML = "New text!";
+    flag = 1;
+    console.log(flag);
+  }
+  else{
+    document.getElementById("p1").innerHTML = "Hello World!";
+    flag = 0;
+    console.log(flag);
+  }
+
+  
+}
+</script>
+
+<p>The paragraph above was changed by a script.</p>
+
+</body>
+</html>
