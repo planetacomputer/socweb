@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<p id="demo">Hello World!</p> 
+<p id="demo">Hello World!</p>
 
 <script>
 // Add code here
@@ -11,15 +11,19 @@ function canviarFormat(){
 	document.getElementById("demo").style.backgroundColor= "yellow";
 }
 
-function reestablirFormat(){
-	document.getElementById("demo").style.border = "none";
-	document.getElementById("demo").style.backgroundColor= "white";
-}
-
 document.getElementById("demo").addEventListener('mouseover', canviarFormat);
 //document.getElementById("demo").addEventListener('mouseout', reestablirFormat);
 
-document.getElementById("demo").onmouseout = reestablirFormat;
+document.getElementById("demo").onmouseout = function(){
+	document.getElementById("demo").style.border = "none";
+	document.getElementById("demo").style.backgroundColor= "white";
+};
+
+function desactivar(){
+	document.getElementById("demo").removeEventListener('mouseover', canviarFormat);
+	}
+
+document.getElementById("demo").ondblclick = desactivar;
 
 </script>
 
