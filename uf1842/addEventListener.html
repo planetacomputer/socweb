@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="p1">
+This is a text.
+This is a text.
+This is a text.
+This is a text.
+</p>
+
+<input id="boto1" type="button" value="Hide text">
+
+<input id="boto2" type="button" value="Show text" onclick="document.getElementById('p1').style.visibility='visible'">
+
+<script>
+document.getElementById("boto1").addEventListener("click", function(){
+  document.getElementById('p1').style.visibility='hidden';
+});
+</script>
+</body>
+</html>
