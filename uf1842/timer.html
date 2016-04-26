@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Timer</title>
+</head>
+<body>
+<p id="demo"></p>
+<script type="text/javascript">
+	var texto = "";
+	var id = setInterval(incrementTexto, 1000);
+	var contador = 0;
+
+	function incrementTexto(){
+		texto += " Hola";
+		document.getElementById("demo").innerHTML = texto;
+		contador++;
+		console.log(contador);
+		if(contador == 10){
+			clearInterval(id);
+			alert("Se acabo");
+		}
+	}
+
+</script>
+</body>
+</html>

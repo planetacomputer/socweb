@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<style>
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background-color: yellow;
+}
+#animate {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+}
+</style>
+<body>
+
+<p>
+<button onclick="myMove()">Baixa</button>
+<button onclick="myMoveUp()">Puja</button>
+
+<button onclick="pingpong()">PingPông</button>
+</p> 
+
+<div id ="container">
+  <div id ="animate"></div>
+</div>
+
+<script>
+  var elem = document.getElementById("animate");
+
+var idPingPong = setInterval(pingpong, 7000);
+
+function pingpong(){
+  var id = setInterval(myMove, 3000);
+  var id2 = setInterval(myMoveUp, 3000);
+  clearInterval(id);
+  clearInterval(id2);
+} 
+
+function myMove() {
+   
+  var pos = 0;
+  var id = setInterval(frame, 4);
+
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos += 1;
+      //pos++; 
+      elem.style.top = pos + 'px'; 
+      elem.style.left = pos + 'px'; 
+    }
+  }
+}
+
+function myMoveUp() {
+    
+  var pos = 350;
+  var id = setInterval(frame, 4);
+
+  function frame() {
+    if (pos == 0) {
+      clearInterval(id);
+    } else {
+      pos = pos - 1;
+      //pos++; 
+      elem.style.top = pos + 'px'; 
+      elem.style.left = pos + 'px'; 
+    }
+  }
+
+}
+</script>
+
+</body>
+</html>
