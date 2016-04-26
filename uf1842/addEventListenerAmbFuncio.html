@@ -10,6 +10,17 @@ function canviarFormat(){
 	document.getElementById("demo").style.border = "4px solid black";
 	document.getElementById("demo").style.backgroundColor= "yellow";
 }
+
+function reestablirFormat(){
+	document.getElementById("demo").style.border = "none";
+	document.getElementById("demo").style.backgroundColor= "white";
+}
+
+document.getElementById("demo").addEventListener('mouseover', canviarFormat);
+//document.getElementById("demo").addEventListener('mouseout', reestablirFormat);
+
+document.getElementById("demo").onmouseout = reestablirFormat;
+
 </script>
 
 </body>
