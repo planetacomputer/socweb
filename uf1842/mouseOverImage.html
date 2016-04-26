@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<img id="image" onmouseover="mostrar(1)" onmouseout="mostrar(0)" src="http://dummyimage.com/160x120&text=HOLA" width="160" height="120">
+
+<script>
+
+function mostrar(param){
+  if(param == 1){
+    document.getElementById("image").src = "http://dummyimage.com/160x120&text=HOLA";
+  }
+  else{
+    document.getElementById("image").src = "http://dummyimage.com/160x120&text=ADIOS";
+  }
+
+  
+}
+</script>
+
+<p>The original image was smiley.gif, but the script changed it to landscape.jpg</p>
+
+</body>
+</html>

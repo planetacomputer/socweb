@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<img id="image" onclick="mostrar()" src="http://dummyimage.com/160x120&text=HOLA" width="160" height="120">
+
+<script>
+var flag = 0;
+function mostrar(){
+  if(flag == 0){
+    document.getElementById("image").src = "http://dummyimage.com/160x120&text=ADIOS";
+    flag = 1;
+    console.log(flag);
+  }
+  else{
+    document.getElementById("image").src = "http://dummyimage.com/160x120&text=HOLA";
+    flag = 0;
+    console.log(flag);
+  }
+
+  
+}
+</script>
+
+<p>The original image was smiley.gif, but the script changed it to landscape.jpg</p>
+
+</body>
+</html>
