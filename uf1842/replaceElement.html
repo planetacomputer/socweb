@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="div1">
+  <p id="p1">This is a paragraph.</p>
+  <p id="p2">This is another paragraph.</p>
+</div>
+
+<script>
+    var child = document.getElementById("p1");
+	function reemplacar(){
+		//Identificacio de pare i fill
+		var parent = document.getElementById("div1");
+		child = document.getElementById("p1");
+
+		//Creacio d'un nou element
+		var para = document.createElement("p");
+		var node = document.createTextNode("This is new.");
+		para.appendChild(node);
+
+		//Reemplacem un fill per altre
+		parent.replaceChild(para,child);
+	}
+
+	child.onclick = reemplacar;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="div1">
+  <p id="p1">This is a paragraph.</p>
+  <p id="p2">This is another paragraph.</p>
+  
+</div>
+
+<script>
+function inserirP(){
+//Creo un element p
+var para = document.createElement("p");
+var node = document.createTextNode("This is new.");
+para.appendChild(node);
+
+//Indico on posar el meu nou element. Fill de div1
+var element = document.getElementById("div1");
+element.appendChild(para);
+}
+
+document.getElementById('p1').onclick = inserirP;
+</script>
+
+</body>
+</html>
