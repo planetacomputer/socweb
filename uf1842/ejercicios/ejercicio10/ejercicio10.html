@@ -11,7 +11,7 @@
 <body>
 
 <p id="contenidos_1">[1] Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.</p>
-<a id="enlace_1" href="#">Ocultar contenidos</a>
+<a id="enlace_1" href="#">Amagar continguts</a>
 
 <br/>
 
@@ -21,6 +21,24 @@
 <br/>
 <p id="contenidos_3">[3] Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.</p>
 <a id="enlace_3" href="#">Ocultar contenidos</a>
-
+<script type="text/javascript">
+	var enlace1 = document.getElementById("enlace_1");
+	var contenido1 = document.getElementById("contenidos_1");
+	var flag1 = 1;
+	enlace1.onclick = function(){
+		if(flag1 == 1){
+			console.log("tanco - " + flag1);
+			contenido1.style.display = "none";
+			enlace1.innerHTML = "Mostrar continguts";
+			flag1--;
+		}
+		else{
+			console.log("obro - " + flag1);
+			contenido1.style.display = "block";
+			enlace1.innerHTML = "Amagar continguts";
+			flag1++;
+		}
+	}
+</script>
 </body>
 </html>
