@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>A script on this page starts this clock:</p>
+
+<p id="demo"></p>
+
+<script>
+var myVar = setInterval(myTimer, 1000);
+var x = 5;
+
+function myTimer() {
+	x--;
+	document.getElementById("demo").innerHTML = x ;
+	if(x == 0){
+		clearInterval(myVar);
+		alert("BOOOM!");
+	}
+}
+</script>
+
+</body>
+</html>
