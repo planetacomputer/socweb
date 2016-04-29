@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+Index
+<script type="text/javascript">
+    var x = navigator.language;
+	var arrIdiomes = ['ca', 'es'];
+	
+    if(x == 'es')
+    	location.assign("page_es.html");
+    else if(x == 'ca')
+    	location.assign("page_ca.html");
+    else
+    	location.assign("nodisponible.html");
+
+
+	//window.location.assign("page_" + navigator.language + ".html");
+</script>
+</body>
+</html>
