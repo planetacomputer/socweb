@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form id="myForm">
+<select id="mySele">
+  <option>Apple</option>
+  <option>Pear</option>
+  <option>Banana</option>
+  <option>Orange</option>
+</select>
+</form>
+
+<form id="myForm2">
+<select id="mySelect">
+  <option>Apple</option>
+  <option>Pear</option>
+  <option>Banana</option>
+  <option>Orange</option>
+</select>
+</form>
+
+<p>The id of the form is:<p>
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = document.forms[1].id;
+</script>
+
+</body>
+</html>

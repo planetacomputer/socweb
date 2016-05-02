@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+localStorage.multipleDe5 = 0;
+function clickCounter() {
+    if(typeof(Storage) !== "undefined") {
+        //Si la variable clickcount existeix, incrementa en un
+        if (localStorage.clickcount) {
+            localStorage.clickcount = parseInt(localStorage.clickcount)+1;
+            if(localStorage.clickcount % 5 == 0)
+                localStorage.multipleDe5 = parseInt(localStorage.multipleDe5)+1;
+        //Si la variable clickcount no existeix, es crea amb valor un, primera visita
+        } else {
+            localStorage.clickcount = 1;
+        }
+        document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+</script>
+</head>
+<body>
+<p><button onclick="clickCounter()" type="button">Click me!</button></p>
+<div id="result"></div>
+<p>Click the button to see the counter increase.</p>
+<p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
+</body>
+</html>

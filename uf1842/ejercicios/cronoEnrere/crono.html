@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
 <body>
-
+<button id="btn" value="Enrere">Enrere</button>
 <p>A script on this page starts this clock:</p>
 
 <p id="demo"></p>
 
 <script>
-var myVar = setInterval(myTimer, 1000);
-var x = 5;
+var myVar;
+var x = 10;
+
+var btn = document.getElementById("btn");
+btn.onclick = function(){
+	 setInterval(myTimer, 1000);
+}
 
 function myTimer() {
 	x--;

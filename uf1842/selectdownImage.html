@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<form>
+Select your favorite fruit:
+<select id="mySelect">
+  <option value="Apple">Apple</option>
+  <option value="Orange">Orange</option>
+  <option value="Pineapple">            Pineapple</option>
+  <option value="Banana">Banana</option>
+</select>
+<br><br>
+<img id="imagen" width="600" height="400" src="" />
+</form>
+
+<p id="demo"></p>
+<script>
+	var obj = document.getElementById("mySelect");
+	getOption();
+	//obj.addEventListener("change", getOption);
+	obj.onchange = function(){getOption()};
+	function getOption() {
+	    document.getElementById("imagen").src = 
+	   "http://dummyimage.com/600x400/000/fff&text=" + obj.options[obj.selectedIndex].value;
+	}
+</script>
+</body>
+</html>

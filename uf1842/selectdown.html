@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+<form>
+Select your favorite fruit:
+<select id="mySelect">
+  <option value="0">Apple</option>
+  <option value="1">Orange</option>
+  <option value="2">Pineapple</option>
+  <option value="3">Banana</option>
+</select>
+<br><br>
+</form>
+
+<p id="demo"></p>
+<script>
+	var obj = document.getElementById("mySelect");
+	//obj.addEventListener("change", getOption);
+	obj.onchange = function(){getOption()};
+	function getOption() {
+	    document.getElementById("demo").innerHTML = 
+	    obj.options[obj.selectedIndex].value;
+	}
+</script>
+</body>
+</html>
