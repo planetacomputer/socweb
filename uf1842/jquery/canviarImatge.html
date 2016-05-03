@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("img").hover(function(){
+    	//Onmouseover
+        $("img").attr("src", "http://dummyimage.com/600x400/000/fff&text=orange");
+        console.log("onmouseover");
+    },
+    function(){
+    	//Onmouseleave
+        $("img").attr("src", "http://dummyimage.com/600x400/000/fff&text=apple");
+        console.log("onmouseout");
+    }); 
+});
+</script>
+</head>
+<body>
+
+<p id="p1">This is a paragraph.</p>
+<img src="http://dummyimage.com/600x400/000/fff&text=orange" />
+
+</body>
+</html>
