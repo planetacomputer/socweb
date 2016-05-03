@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("input").on({
+	    keydown: function(){
+	       $(this).css({ opacity: 0.01 });
+	    }, 
+	    click: function(){
+	        $(this).css({ opacity: 1 });
+	    } 
+	});
+});
+
+
+</script>
+</head>
+<body>
+
+<input type="text" value="Press any key inside me to hide me" size="40">
+
+</body>
+</html>

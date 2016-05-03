@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("p:last").on({
+        mouseenter: function(){
+            $(this).css("background-color", "lightgray");
+        },  
+        mouseleave: function(){  
+            if($(this).css("background-color") != "rgb(255, 255, 0)")
+                $(this).css("background-color", "lightblue");
+        }, 
+        click: function(){
+            $(this).css("background-color", "rgb(255, 255, 0)");
+        }  
+    });
+});
+</script>
+</head>
+<body>
+
+<p>Click or move the mouse pointer over this paragraph.</p>
+<p>Click or move the mouse pointer over this paragraph.</p>
+
+</body>
+</html>

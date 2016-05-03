@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+<style type="text/css">
+	#coordenades{
+		font-size: 8em;
+		text-align: center;
+		font-family: "Indie Flower";
+	}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<title>Mouse coordenates</title>
+</head>
+<body>
+<div id="coordenades"></div>
+<script type="text/javascript">
+	$(document).ready(function(){
+
+		  $("html").mousemove(function(event) {
+		  	  //console.log(screen.width);
+		  	  if(event.pageX < screen.width/2){
+		  	  	console.log("Esquerra");
+		  	  	$("#coordenades").css("color", "blue");
+		  	  }
+		  	  else{
+		  	  	console.log("Dreta");
+		  	  	$("#coordenades").css("color", "red");
+		  	  }
+			  var msg = "";
+			  msg += event.pageX + ", " + event.pageY;
+			  console.log(msg);
+			  $("#coordenades").html(msg);
+		  });
+
+	});
+</script>
+</body>
+</html>

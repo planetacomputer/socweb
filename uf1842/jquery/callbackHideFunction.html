@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#btn").click(function(){
+        $("p").hide("slow", function(){
+          alert($(this).attr("id"));
+        });
+    });  
+});
+</script>
+</head>
+<body>
+
+<button id="btn">Hide</button>
+
+<p id="p1">This is a paragraph with little content.</p>
+<p id="p2">This is another small paragraph.</p>
+
+</body>
+</html>
