@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+</head>
+<body>
+<img id="imagen" width="100px" src="http://dummyimage.com/100x100/000/fff&text=orange">
+
+<script>
+$(document).ready(function(){
+    $("#imagen").mouseover(function(){
+        $("#imagen").attr("src", "http://dummyimage.com/100x100/000/fff&text=blue");
+        $("#imagen").attr("width", "300px");
+    });
+    $("#imagen").mouseout(function(){
+        $("#imagen").attr("src", "http://dummyimage.com/100x100/000/fff&text=orange");
+        $("#imagen").attr("width", "100px");
+    });
+});
+</script>
+</body>
+</html>

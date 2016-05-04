@@ -3,10 +3,20 @@
 <head>
 <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
 <style type="text/css">
+	#body{
+		position : relative;
+	}
 	#coordenades{
 		font-size: 8em;
 		text-align: center;
 		font-family: "Indie Flower";
+	}
+	#platform{
+		border: 1px solid black;
+		background-color: yellow;
+		width: 80px;
+		height: 20px;
+		position : absolute;
 	}
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
@@ -14,6 +24,7 @@
 </head>
 <body>
 <div id="coordenades"></div>
+<div id="platform"></div>
 <script type="text/javascript">
 	$(document).ready(function(){
 
@@ -27,7 +38,9 @@
 		  	  	console.log("Dreta");
 		  	  	$("#coordenades").css("color", "red");
 		  	  }
-			  
+		  	  if(event.pageX < screen.width-$("#platform").width())
+			   $("#platform").css("left", event.pageX);
+
 			  msg = event.pageX + ", " + event.pageY;
 			  console.log(msg);
 			  console.log(event.timeStamp);

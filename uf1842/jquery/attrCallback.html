@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("a").attr("href", function(i, origValue){
+            return (origValue + "/jquery" + i); 
+        });
+    }); 
+});
+</script>
+</head>
+<body>
+
+<p>
+	<a href="http://www.w3schools.com" >W3Schools.com</a>
+	<a href="http://www.w3schools.com" >W3Schools.com</a>
+</p>
+
+<button>Change href Value</button>
+
+<p>Mouse over the link (or click on it) to see that the value of the href attribute has changed.</p>
+
+</body>
+</html>
