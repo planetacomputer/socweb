@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+    console.log("hola log");
+    console.info("hola info");
+    console.warn("Warning meu");
+    console.error("error meu");
+    console.debug("debug meu");
+    	function factorial(num){
+    		var er = new Error("El numero no puede ser negativo");
+    		if(num<0) throw(er);
+    		if(num === 0) return 1;
+    		return num*factorial(num-1);
+    	}
+
+    	try{
+    		console.info("hola info");
+    		console.log(factorial(-5));
+    		URI();
+    	}
+    	catch(e){
+
+    		console.log(e.name + "-" + e.message);
+    		alert("Si us plau torna-ho a intentar");
+    	}
+    	finally{
+    		console.log("Finally s'executa sempre");
+    	}
+
+
+    	function URI(){
+    		try {
+  				throw new URIError('Hello', 'someFile.js', 10);
+			} catch (e) {
+				throw new URIError('Hello', 'someFile.js', 10);
+			  console.log(e instanceof URIError); // true
+			  console.log(e.message);             // "Hello"
+			  console.log(e.name);                // "URIError"
+			  console.log(e.fileName);            // "someFile.js"
+			  console.log(e.lineNumber);          // 10
+			  console.log(e.columnNumber);        // 0
+			  console.log(e.stack);               // "@Scratchpad/2:2:9\n"
+			  
+			}
+    	}
+
+
+    	
+    </script>
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>

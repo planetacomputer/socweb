@@ -40,7 +40,7 @@
 <body>
 <h1>Manejando el objeto password...</h1>
 <h2>Introduzca su usuario y clave...</h2>
-<form name="miFormulario" action="javascript:validar()">
+<form name="miFormulario" action="javascript:validarUsuarios()">
 	<div id="camps">
 		<div class="input-group">
 		    <label>usuario:</label>
@@ -54,6 +54,7 @@
 	<input type="submit" name="botonEnviar" value="Enviar">
 	<input type="reset" name="botonLimpiar" value="Netejar">
 </form>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script type="text/javascript">
 	function validar(){
@@ -64,6 +65,34 @@
 		else{
 			alert("User password incorrectes!");
 		}
+	}
+
+    var usuarios = [
+	    "DAVID",
+	    "CARLOS",
+	    "JUAN",
+	    "PEPE"
+	];
+    
+    var claves = [
+	    "1111",
+	    "2222",
+	    "3333",
+	    "4444"
+    ];
+
+    var mensaje = "";
+	function validarUsuarios(){
+		for (i = 0; i < usuarios.length; i++){
+	        if ((usuarios[i] == $("#user").val().toUpperCase()) && (claves[i] == $("#password").val())){
+	            mensaje = "Bienvenido al sistema...";
+	            break;
+	        }
+	        else{
+	        	mensaje = "NOOOOO";
+	        }
+    	} 
+    	alert(mensaje);
 	}
 </script>
 </body>
