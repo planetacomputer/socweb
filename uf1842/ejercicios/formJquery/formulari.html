@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mi formulari</title>
+</head>
+<style type="text/css">
+	*{
+		margin: 5px;
+	}
+	body{
+		text-align: center;
+	}
+
+	div.input-group {
+    	display: flex;
+	}
+
+	label {
+		white-space: nowrap;
+	}
+
+	input {
+		display: inline-block; // for safari
+		flex: 1;
+	}
+	#camps{
+		margin-left: 20%;
+	}
+	form{
+	    border: 1px solid gray;
+	    width: 46%;
+	    margin-left: 25%;
+	    margin-top: 30px;
+	    border-radius: 8px;
+	    background: beige url("https://lincolnloop.com/static/assets/img/lincolnloop-mark.9b93136b4561.svg") no-repeat right top 5px;
+	    background-size: 100px;
+	}
+
+</style>
+<body>
+<h1>Manejando el objeto password...</h1>
+<h2>Introduzca su usuario y clave...</h2>
+<form name="miFormulario" action="javascript:validar()">
+	<div id="camps">
+		<div class="input-group">
+		    <label>usuario:</label>
+		    <input type="text" id="user" placeholder="posa aqui el teu nom" required></input>
+		</div>
+		<div class="input-group">
+		    <label>passwd:</label>
+		    <input type="password" name="psswd" id="password" placeholder="posa aqui la teva contrassenya" required></input>
+		</div>
+	</div>
+	<input type="submit" name="botonEnviar" value="Enviar">
+	<input type="reset" name="botonLimpiar" value="Netejar">
+</form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script type="text/javascript">
+	function validar(){
+		if($("#user").val() == "david" && $("#password").val() == "1111"){
+			alert("OK");
+			location.href = "http://stackoverflow.com";
+		}
+		else{
+			alert("User password incorrectes!");
+		}
+	}
+</script>
+</body>
+</html>
