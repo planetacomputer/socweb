@@ -1,3 +1,6 @@
+/*
+http://www.javascriptya.com.ar/jquery/temarios/descripcion.php?cod=88&punto=32&inicio=18
+*/
 $(document).ready(function () {
   $("body").append('<div id="divmensaje">hhhh</div>');
   $("#divmensaje").hide();
