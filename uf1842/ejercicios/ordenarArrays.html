@@ -9,7 +9,10 @@
 var cadenasTexto = new Array();
 
 function AddTexto(){
-
+  laCadena = document.formulario.campoCadenaTexto.value; //Toma laCadena del campo de texto
+  cadenasTexto.push(laCadena); //añade laCadena al final del array 
+  cadenasTexto.sort(); //Ordena el array
+  document.formulario.areaCadenasOrdenadas.value=cadenasTexto.join("\n");
 }
 </script>
 </head>
