@@ -1,4 +1,5 @@
 var maximo, mmedio, reproducir, barra, progreso, silenciar, volumen, bucle;
+
 function iniciar(){
   maximo = 400;
   mmedio = document.getElementById('medio');
@@ -7,6 +8,8 @@ function iniciar(){
   progreso = document.getElementById('progreso');
   silenciar = document.getElementById('silenciar');
   volumen = document.getElementById('volumen');
+  volumeLevel = document.getElementById('volumeLevel');
+  volumeLevel.innerHTML = volumen.value*10;
   reproducir.addEventListener('click', cambiar);
   silenciar.addEventListener('click', sonido);
   barra.addEventListener('click', mover);
@@ -57,5 +60,7 @@ function sonido(){
 
 function nivel(){
   mmedio.volume = volumen.value;
-}
+  volumeLevel.innerHTML = volumen.value*10;
+  
 
+}

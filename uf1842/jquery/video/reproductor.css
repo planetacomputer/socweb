@@ -46,3 +46,8 @@ nav{
 .clear{
   clear: both;
 }
+#volumeLevel{
+    float: right;
+    color: white;
+    margin-top: 2px; 
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body onload="checkCookie()">
+<div id="cookieUsername"></div>
+<div id="cookieComptador"></div>
+<input id="btn" type="button">Mostrar cookie username</input>
+<script>
+/*var btn = document.getElementById("btn");
+btn.onclick = function(){
+    alert(getCookie("username"));
+}*/
+
+
+function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname+"="+cvalue+"; "+expires;
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            var a = c.substring(name.length, c.length);
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function checkCookie() {
+
+    var user=getCookie("username");
+    if (user != "") {
+        alert("Welcome again " + user);
+    } else {
+       user = prompt("Please enter your name:","");
+       if (user != "" && user != null) {
+           setCookie("username", user, 30);
+       }
+    }
+
+    var compt = parseInt(getCookie("comptador"));
+    if(isNaN(compt)){
+        setCookie("comptador", 1, 30);
+    }
+    else{
+        // alert("Ja has visitat aquest pagina " + compt + " vegades");
+        compt = compt + 1;
+        setCookie("comptador", compt, 30);
+    }
+    //Carreguem el valor de la cookie username al div
+    var cookieUsername = document.getElementById("cookieUsername");
+    //alert(getCookie("username"));
+    cookieUsername.innerHTML = getCookie("username");
+    cookieComptador.innerHTML = getCookie("comptador");
+}
+
+</script>
+</body>
+</html>
