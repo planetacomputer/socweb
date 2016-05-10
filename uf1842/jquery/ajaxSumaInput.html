@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $.get("demo.php",
+        {
+          num1: document.getElementById("factor1").value,
+          num2: document.getElementById("factor2").value
+        },
+        function(data, status){
+            //alert("Data: " + data + "\nStatus: " + status);
+            $("#resultado").html(data);
+        });
+    });
+});
+</script>
+</head>
+<body>
+
+<button>Send an HTTP POST request to a page and get the result back</button>
+<input type="number" id="factor1"></input>
+<input type="number" id="factor2"></input>
+<div id="resultado"></div>
+</body>
+</html>

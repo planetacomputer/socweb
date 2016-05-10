@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    var e = document.getElementById("operacion");
+
+    $("button").click(function(){
+        $.get("demo.php",
+        {
+          num1: document.getElementById("factor1").value,
+          num2: document.getElementById("factor2").value,
+          operacion: e.options[e.selectedIndex].value
+        },
+        function(data, status){
+            //alert("Data: " + data + "\nStatus: " + status);
+            $("#resultado").html(data);
+        });
+    });
+});
+</script>
+</head>
+<body>
+
+<button>Send an HTTP POST request to a page and get the result back</button>
+<input type="text" id="factor1"></input>
+<select id="operacion">
+  <option value="+">Suma</option>
+  <option value="-">Resta</option>
+  <option value="*">Multiplicación</option>
+  <option value="/">División</option>
+</select>
+<input type="text" id="factor2"></input>
+<div id="resultado"></div>
+</body>
+</html>
