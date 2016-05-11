@@ -1,0 +1,10 @@
+1- Crear una pàgina html5 ex1.html i que en carregar-se mostri un prompt. A continuació hi posem un número i un alert ens ha de dir si és parell o senar.
+2- Crear una pagina html5 ex2.html i un botó <button> que en ser clicat mostri la data en un alert.
+3- Crear una pàgina html5 ex3.html. Escriure dos elements spans amb números en el seu interior. Crear una funció que mostri en un alert la suma d'ambdòs valors span.
+4- Crear un pàgina html5 ex4.html. Crear una variable string amb el contingut "Javascript és un llenguatge compilat" en un div. A continuació, en clicar sobre un botó, aplicar una funció string que reeemplaci el text 'compilat' per 'interpretat'.
+5- Crear una pàgina html5 ex5.html. Crear una array de strings amb 4 països europeus, en aquest ordre: França, Espanya, Itàlia, Austria. Crear dos elements span en la pàgina que mostri un la longitud de l'array i l'altre aquests països ordenats alfabèticament.
+6- Crear una pàgina html5 ex6.html. Crear un element div i un botó al costat que quan es cliqui cada vegada mostri al div  nombres aleatoris d'1 a 10.
+7- Crear una pàgina html5 ex7.html. Crear un array amb els nombres 3, 6, 1, 9, 11, 4, 5. A continuació aplicar loop per recòrre'ls i mostrar en un únic alert tots els imparells junts com a cadena en un alert.
+8- Crear una pàgina html5 ex8.html. Crear amb jquery una caixa div de color vermell que aparegui i desaparegui cada vegada que cliquem un botó que s'ha de trobar a la seva dreta.
+9- Crear una pàgina html5 ex9.html. Crear amb jquery una crida Ajax de tipus get al document nom.php passant el teu nom com a paràmetre (el nom del paràmetre també ha de ser "nom"). El programa retornarà la frase "Hola elteunom".
+10- Crear una pàgina html5 ex10.html. Crear un div amb text vermell i un botó. Programar el botó amb una funció que vagi cambiant de manera alternativa el color del text de vermell a blau cada vegada que el cliquem (vermell-blau-vermell-blau...)
