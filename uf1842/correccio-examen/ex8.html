@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	div{
+		height: 50px;
+		width: 50px;
+		background-color: red;
+		float: left;
+	}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("div").toggle();
+    });
+});
+</script>
+</head>
+<body>
+
+<div></div>
+
+<button>Toggle between hide() and show()</button>
+
+</body>
+</html>

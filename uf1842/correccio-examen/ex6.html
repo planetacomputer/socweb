@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div id="alea"></div>
+<button id="boton">Random</button>
+<script type="text/javascript">
+
+	document.getElementById("boton").addEventListener('click', function() {
+    	document.getElementById("alea").innerHTML = parseInt(Math.random()*10)+1;
+	}, false);
+	
+</script>
+</body>
+</html>

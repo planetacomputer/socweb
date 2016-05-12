@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("div").toggleClass("red");
+    });
+});
+</script>
+<style>
+.red {
+    color: red !important;
+}
+
+.blue{
+	color: blue;
+}
+
+</style>
+</head>
+<body>
+
+<button>Toggle class "main" for p elements</button>
+
+<div class="blue">This is a paragraph.</div>
+
+</body>
+</html>

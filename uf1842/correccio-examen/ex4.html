@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div id="text1">Javascript es un llenguatge compilat</div>
+<button id="boton">Reemplacar</button>
+<script type="text/javascript">
+	document.getElementById("boton").addEventListener('click', function() {
+    	var str = document.getElementById("text1");
+    	var res.innerHTML = str.innerHTML.replace("compilat", "interpretat");
+    	str.innerHTML = res;
+	}, false);
+</script>
+
+
+</body>
+</html>
