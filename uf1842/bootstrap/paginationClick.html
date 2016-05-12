@@ -21,16 +21,23 @@
     <li><a href="#">3</a></li>
     <li><a href="#">4</a></li>
     <li><a href="#">5</a></li>
+    <li><a href="#">6</a></li>
+    <li><a href="#">7</a></li>
+    <li><a href="#">8</a></li>
+    <li><a href="#">9</a></li>
   </ul>
 
 </div>
 <script type="text/javascript">
+
   $("#but").click(function(){
-    var count = 0;
-    while(count >= $(".pagination").children().length){
-      $(".active").removeClass("active").next().addClass("active");
-      count++;
-    }
+      if($(".active").next().length > 0)
+        $(".active").removeClass("active").next().addClass("active");
+      else{
+         $(".active").removeClass("active");
+         $(".pagination li:first-child").addClass("active");
+      }
+    
   })
 </script>
 </body>
