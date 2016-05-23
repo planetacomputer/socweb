@@ -1,0 +1,10 @@
+1- Modificar el menú de la web perquè només apareguin tres opcions: HOME, PRODUCTES i CONTACTE. Els seus enllaços han d'apuntar, respectivament a: home.html, productes.html i contacte.html
+2- Modificar el color de fons del header per tal que sigui #4D296F
+3- El tipus de lletra de tot el document ha de ser Helvetica
+4- Eliminar de la barra lateral el component (amb tots els seus enllaços) Links
+5- En aquesta barra, que els títols dels components (les paraules Categories i Blogroll) tinguin un estil de sotslineat i color #D2691E.
+6- Canviar les 2 imatges de sota '269x100.gif' per les imatges 'imatge1.png' i 'imatge2.png' que trobareu a la mateixa carpeta on es troba l'original.
+7- Sobre cada enllaç del menú principal superior, canviar a color #00FF97 quan fem hover per sobre.
+8- Sobre cada títol de post 'POST TITLE', en fer click, ha d'aparèixer un alert amb l'amplada de la pantalla, tot cridant el corresponent objecte JavaScript que l'ofereix. Podeu fer el selector amb jQuery.
+9- En l'apartat Categories de la barra lateral. Fer servir la funció slideToggle de jQuery per desplegar i col·lapsar els elements de sota (nav) cada vegada que fem click sobre la paraula del h2 Categories (podeu afegir atribut id a Categories)
+10- Sobre cada títol de post 'POST TITLE', en fer passar el cursor per sobre, que deixi de ser visible el text de sota seu, el propi de cada un, "Admin, domainname.com".
